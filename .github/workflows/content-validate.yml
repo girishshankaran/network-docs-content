@@ -12,6 +12,15 @@ jobs:
     steps:
       - name: Checkout content repo
         uses: actions/checkout@v5
+        with:
+          path: network-docs-content
+
+      - name: Checkout releases repo
+        uses: actions/checkout@v5
+        with:
+          repository: girishshankaran/network-docs-releases
+          ref: main
+          path: network-docs-releases
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -19,7 +28,10 @@ jobs:
           node-version: 20
 
       - name: Validate canonical content
-        run: node scripts/validate-content.js
+        run: node network-docs-content/scripts/validate-content.js
+
+      - name: Check release packaging suggestions
+        run: node network-docs-releases/scripts/suggest-release-updates.js network-docs-content network-docs-releases
 
   trigger-releases-publish:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
