@@ -2,12 +2,15 @@
 topic_id: NET-UPGRADE-TASK-001
 title: Upgrading your routers
 lifecycle:
-  introduced_in: "20.0","19.9"
+  introduced_in: 
+    - "20.0"
+    - "19.9"
   updated_in: []
   deprecated_in: null
   status: active
   replaced_by: null
-  applies_to: ["20.0"]
+  applies_to: 
+    - "20.0"
 retrieval:
   is_canonical: true
   dedupe_key: upgrade-your-routers
