@@ -1,6 +1,17 @@
 ---
 topic_id: NET-DELETE-CONFIG-TASK-001
 title: Delete router configurations
+short_title: Delete configurations
+summary: Remove saved configuration profiles that are no longer required for the selected router fleet.
+product: Cisco Router Operations Manager
+platform: IOS-XR routers
+content_type: task
+audience: ["network-operations", "configuration-admin"]
+estimated_time: 6 minutes
+permissions: ["administrator"]
+tags: ["cleanup", "configuration", "lifecycle"]
+owner: Network Docs
+last_reviewed: "2026-04-23"
 lifecycle:
   introduced_in: "19.9"
   updated_in: []

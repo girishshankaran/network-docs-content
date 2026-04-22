@@ -1,6 +1,17 @@
 ---
 topic_id: NET-IOSXR-DEPLOY-TASK-001
 title: Deploying IOS-XR OS
+short_title: Deploy IOS-XR OS
+summary: Upload, stage, and deploy an IOS-XR software image to supported routers in managed releases.
+product: Cisco Router Operations Manager
+platform: IOS-XR routers
+content_type: task
+audience: ["network-operations", "platform-admin"]
+estimated_time: 20 minutes
+permissions: ["administrator"]
+tags: ["ios-xr", "software-deployment", "maintenance"]
+owner: Network Docs
+last_reviewed: "2026-04-23"
 lifecycle:
   introduced_in: "19.9"
   updated_in: ["20.0"]

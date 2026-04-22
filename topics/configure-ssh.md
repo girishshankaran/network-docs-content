@@ -1,6 +1,17 @@
 ---
 topic_id: NET-SSH-TASK-001
 title: Configure SSH access
+short_title: Configure SSH
+summary: Enable secure shell access for operational administrators who need command-line connectivity to routers.
+product: Cisco Router Operations Manager
+platform: IOS-XR routers
+content_type: task
+audience: ["network-operations", "platform-admin"]
+estimated_time: 5 minutes
+permissions: ["administrator"]
+tags: ["ssh", "access", "security"]
+owner: Network Docs
+last_reviewed: "2026-04-23"
 lifecycle:
   introduced_in: "19.0"
   updated_in: ["20.0"]

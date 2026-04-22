@@ -1,6 +1,17 @@
 ---
 topic_id: NET-DHCP-TASK-001
 title: Configure DHCP on a router
+short_title: Configure DHCP
+summary: Configure the router to provide DHCP scopes and address leases for branch subnets.
+product: Cisco Router Operations Manager
+platform: IOS-XR routers
+content_type: task
+audience: ["network-operations", "platform-admin"]
+estimated_time: 10 minutes
+permissions: ["administrator"]
+tags: ["dhcp", "address-management", "lan-services"]
+owner: Network Docs
+last_reviewed: "2026-04-23"
 lifecycle:
   introduced_in: "21.0"
   updated_in: []

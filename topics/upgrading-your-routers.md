@@ -1,16 +1,24 @@
 ---
 topic_id: NET-UPGRADE-TASK-001
 title: Upgrading your routers
+short_title: Upgrade routers
+summary: Upload and activate a new approved software image on managed routers in release 20.0.
+product: Cisco Router Operations Manager
+platform: IOS-XR routers
+content_type: task
+audience: ["network-operations", "platform-admin"]
+estimated_time: 15 minutes
+permissions: ["administrator"]
+tags: ["upgrade", "software", "maintenance"]
+owner: Network Docs
+last_reviewed: "2026-04-23"
 lifecycle:
-  introduced_in: 
-    - "20.0"
-    - "19.9"
+  introduced_in: "20.0"
   updated_in: []
   deprecated_in: null
   status: active
   replaced_by: null
-  applies_to: 
-    - "20.0"
+  applies_to: ["20.0"]
 retrieval:
   is_canonical: true
   dedupe_key: upgrade-your-routers

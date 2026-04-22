@@ -1,6 +1,17 @@
 ---
 topic_id: NET-PROXY-TASK-001
 title: Configure proxy on a router
+short_title: Configure proxy
+summary: Configure outbound proxy settings for router-initiated traffic and software retrieval.
+product: Cisco Router Operations Manager
+platform: IOS-XR routers
+content_type: task
+audience: ["network-operations", "security-admin"]
+estimated_time: 8 minutes
+permissions: ["administrator"]
+tags: ["proxy", "egress", "network-services"]
+owner: Network Docs
+last_reviewed: "2026-04-23"
 lifecycle:
   introduced_in: "20.0"
   updated_in: []
