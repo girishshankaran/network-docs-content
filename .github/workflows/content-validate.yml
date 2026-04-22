@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -19,3 +20,17 @@ jobs:
 
       - name: Validate canonical content
         run: node scripts/validate-content.js
+
+  trigger-releases-publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger release site rebuild
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_REPO_TRIGGER_TOKEN }}
+        run: |
+          gh api \
+            repos/girishshankaran/network-docs-releases/actions/workflows/releases-pages.yml/dispatches \
+            -X POST \
+            -f ref=main
