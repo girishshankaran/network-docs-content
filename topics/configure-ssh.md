@@ -17,3 +17,21 @@ retrieval:
 # Configure SSH access
 
 Use this procedure to enable SSH access on the router.
+
+## Steps
+
+:::version range="19.9"
+1. Open **Configuration > Device Settings**.
+2. Enable **SSH Server**.
+3. Save the running configuration.
+:::
+
+:::version range="20.0+"
+1. Open **Configuration > Security > Access**.
+2. Turn on **SSH Access**.
+3. Apply the policy.
+:::
+
+## Verification
+
+Confirm that the SSH service shows as enabled in the router access summary.
