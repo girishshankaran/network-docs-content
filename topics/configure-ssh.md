@@ -18,7 +18,7 @@ lifecycle:
   deprecated_in: null
   status: active
   replaced_by: null
-  applies_to: ["19.9", "20.0", "21.0"]
+  applies_to: ["19.0", "20.0", "21.0"]
 retrieval:
   is_canonical: true
   dedupe_key: configure-ssh-access

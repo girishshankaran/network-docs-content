@@ -18,7 +18,7 @@ lifecycle:
   deprecated_in: null
   status: active
   replaced_by: null
-  applies_to: ["19.9"]
+  applies_to: ["19.0"]
 retrieval:
   is_canonical: true
   dedupe_key: delete-router-configurations
