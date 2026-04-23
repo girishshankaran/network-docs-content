@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   validate:
@@ -29,24 +29,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
-
-      - name: Assign missing topic IDs
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: node network-docs-content/scripts/assign-missing-topic-ids.js
-
-      - name: Commit assigned topic IDs
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          cd network-docs-content
-          if git diff --quiet; then
-            echo "No topic_id updates to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add topics
-          git commit -m "Assign missing topic IDs"
-          git push
 
       - name: Validate canonical content
         run: node network-docs-content/scripts/validate-content.js
