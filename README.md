@@ -24,6 +24,7 @@ Authoring flow:
 
 - create new topics with `node scripts/create-topic.js --title "Topic title" --release "20.0"`
 - the script assigns a system-generated `topic_id`
+- if a writer pushes a topic without `topic_id`, the `main` workflow assigns one automatically and pushes a follow-up commit
 - CI validation remains strict on `main`
 - local draft validation can allow missing `topic_id` with:
   - `ALLOW_MISSING_TOPIC_ID=true node scripts/validate-content.js`
