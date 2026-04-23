@@ -4,6 +4,7 @@ const path = require("path");
 const repoRoot = path.resolve(__dirname, "..");
 const topicsDir = path.join(repoRoot, "topics");
 const topicIdPattern = /^[A-Z0-9]+(?:-[A-Z0-9]+)*-(TASK|CONCEPT|REFERENCE)-\d{3}$/;
+const allowMissingTopicId = process.argv.includes("--allow-missing-topic-id") || process.env.ALLOW_MISSING_TOPIC_ID === "true";
 
 function parseScalar(raw) {
   const trimmed = raw.trim();
@@ -136,7 +137,11 @@ function main() {
 
     const topicId = frontmatter.topic_id;
     if (!topicId) {
-      issues.push(`${fileName}: missing topic_id`);
+      if (allowMissingTopicId) {
+        console.warn(`Warning: ${fileName} is missing topic_id (allowed in draft mode).`);
+      } else {
+        issues.push(`${fileName}: missing topic_id`);
+      }
       continue;
     }
 
@@ -164,7 +169,7 @@ function main() {
     process.exit(1);
   }
 
-  console.log(`Validated ${topicFiles.length} canonical topics. No missing or duplicate topic_id values found.`);
+  console.log(`Validated ${topicFiles.length} canonical topics. No duplicate topic_id values found${allowMissingTopicId ? " (draft mode allowed missing topic_id)." : "."}`);
 }
 
 main();

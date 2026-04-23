@@ -19,3 +19,11 @@ This repo does not store:
 Publishing is driven from the companion repo:
 
 - `network-docs-releases`
+
+Authoring flow:
+
+- create new topics with `node scripts/create-topic.js --title "Topic title" --release "20.0"`
+- the script assigns a system-generated `topic_id`
+- CI validation remains strict on `main`
+- local draft validation can allow missing `topic_id` with:
+  - `ALLOW_MISSING_TOPIC_ID=true node scripts/validate-content.js`
