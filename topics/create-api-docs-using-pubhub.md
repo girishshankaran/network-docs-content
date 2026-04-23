@@ -1,5 +1,5 @@
 ---
-topic_id: 
+topic_id: "NET-CREATE-PUBLISH-API-TASK-001"
 title: Create and publish API documentation in PubHub
 short_title: Publish API Documentation
 summary: Create an API documentation site from the OpenAPI Template Project
