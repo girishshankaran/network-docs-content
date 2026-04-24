@@ -18,7 +18,7 @@ lifecycle:
   deprecated_in: null
   status: active
   replaced_by: null
-  applies_to: ["20","21.0"]
+  applies_to: ["20.0","21.0"]
 retrieval:
   is_canonical: true
   dedupe_key: "configure-auth-in-your-routers"
