@@ -13,12 +13,12 @@ tags: ["migration", "upgrade", "router-lifecycle"]
 owner: "Network Docs"
 last_reviewed: "2026-04-25"
 lifecycle:
-  introduced_in: "21.0"
+  introduced_in: "19.0"
   updated_in: []
   deprecated_in: null
   status: active
   replaced_by: null
-  applies_to: ["21.0"]
+  applies_to: ["19.0","21.0"]
 retrieval:
   is_canonical: true
   dedupe_key: "migrating-to-a-new-version-of-routers"
