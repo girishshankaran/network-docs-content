@@ -33,6 +33,9 @@ jobs:
       - name: Validate canonical content
         run: node network-docs-content/scripts/validate-content.js
 
+      - name: Validate release packaging
+        run: node network-docs-releases/scripts/validate-release-assets.js network-docs-content network-docs-releases
+
       - name: Check release packaging suggestions
         run: node network-docs-releases/scripts/suggest-release-updates.js network-docs-content network-docs-releases
 
