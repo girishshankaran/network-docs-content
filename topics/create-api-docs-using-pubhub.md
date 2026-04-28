@@ -67,7 +67,13 @@ The generated repository includes the standard folders for an API documentation 
 
 The site is updated in PubHub and submitted for publication with the latest OpenAPI file and user-facing content.
 
+:::version range="20.0"
 ## What to review before publication
+:::
+
+:::version range="21.0"
+## Before you publish
+:::
 
 Review the following items before you request publication:
 
